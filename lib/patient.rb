@@ -18,10 +18,12 @@ class Patient
   end
 
   def appointments
-   Appointment.all.collect {|appointment| appointment.patient == self}.uniq
+   Appointment.all.collect {|appointment| appointment.patient == self}
   end
 
   def doctors
-    Appointment.all.map { |appointment| appointment.doctor}.uniq
+    Appointment.all.map do |appointment| 
+      appointment.doctor
+    end
   end
 end
