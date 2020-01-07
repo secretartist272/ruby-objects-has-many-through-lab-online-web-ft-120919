@@ -22,7 +22,6 @@ class Patient
   end
 
   def doctors
-    Appointment.all.map } 
-    end
+    Appointment.all.map { |appointment| appointment.doctor}.uniq
   end
 end
